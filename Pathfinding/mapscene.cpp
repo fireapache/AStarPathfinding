@@ -32,7 +32,8 @@ MapScene::MapScene(QObject *parent)
 
     pathOnScreen = false;
 
-    QGraphicsScene::QGraphicsScene(parent);
+	parent = 0;
+    //QGraphicsScene::QGraphicsScene(parent);
 }
 
 MapScene::~MapScene()

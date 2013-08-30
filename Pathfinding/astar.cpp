@@ -146,14 +146,14 @@ void AStar::openNode(UINT x, UINT y, UINT originX, UINT originY, list<NodeState>
     }
     else if (matrix[x][y].expandCost != 1)
     {
-        //orignalPathCost = pathCostToNode(matrix[x][y].originX, matrix[x][y].originY, x, y);
-        //newPathCost = pathCostToNode(originX, originY, x, y);
+        orignalPathCost = pathCostToNode(matrix[x][y].originX, matrix[x][y].originY, x, y);
+        newPathCost = pathCostToNode(originX, originY, x, y);
 
         predX = matrix[x][y].originX;
         predY = matrix[x][y].originY;
 
-        orignalPathCost = matrix[predX][predY].pathCost;
-        newPathCost = matrix[originX][originY].pathCost;
+        //orignalPathCost = matrix[predX][predY].pathCost;
+        //newPathCost = matrix[originX][originY].pathCost;
 
         if (orignalPathCost < newPathCost) return;
     }
