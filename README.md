@@ -14,7 +14,7 @@ Contents of this repository:
 		
 		In order to compile the GUI application, you'll have to, first, install the Qt Creator 2.7.1 or later (based on 
 		Qt 4.8.4 32-bit framework), second, clone this entire repository or pull the updates, third, open the project 
-		using the downloaded editor, and finally, compile the application within the Qt Creator ambient.
+		using the downloaded editor, and finally, compile the application within the Qt Creator environment.
 		
 	* A* Pathfinding source code:
 	
