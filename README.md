@@ -3,6 +3,8 @@ AStarPathfinding
 
 A A* based pathfinding application to generate paths within a matrix of nodes, generally used in 2D game platforms.
 
+Demonstration: http://www.youtube.com/watch?v=eVRv49ZibQw
+
 ================
 
 Contents of this repository:
