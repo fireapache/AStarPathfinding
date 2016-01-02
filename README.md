@@ -27,6 +27,17 @@ Contents of this repository:
 		
 		The rest of the files belongs to the Qt GUI project.
 		
+
+================
+
+Installation:
+
+	* Install Qt Creator from Ubuntu Software Center.
+	* Clone this repository.
+	* Run it by: ./Build/Pathfinding
+	* Or open Pathfinding.pro file using Qt Creator editor.
+	* Have fun!
+
 ================
 
 	Developer contact:
