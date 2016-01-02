@@ -307,8 +307,8 @@
       <string/>
      </property>
      <property name="icon">
-      <iconset>
-       <normaloff>images/startButton.png</normaloff>images/startButton.png</iconset>
+      <iconset resource="images.qrc">
+       <normaloff>:/images/images/startButton.png</normaloff>:/images/images/startButton.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -343,8 +343,8 @@
       <string/>
      </property>
      <property name="icon">
-      <iconset>
-       <normaloff>images/endButton.png</normaloff>images/endButton.png</iconset>
+      <iconset resource="images.qrc">
+       <normaloff>:/images/images/endButton.png</normaloff>:/images/images/endButton.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -382,8 +382,8 @@
       <string/>
      </property>
      <property name="icon">
-      <iconset>
-       <normaloff>images/freeButton.png</normaloff>images/freeButton.png</iconset>
+      <iconset resource="images.qrc">
+       <normaloff>:/images/images/freeButton.png</normaloff>:/images/images/freeButton.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -405,8 +405,8 @@
       <string/>
      </property>
      <property name="icon">
-      <iconset>
-       <normaloff>images/wallButton.png</normaloff>images/wallButton.png</iconset>
+      <iconset resource="images.qrc">
+       <normaloff>:/images/images/wallButton.png</normaloff>:/images/images/wallButton.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -457,8 +457,8 @@
       <string/>
      </property>
      <property name="icon">
-      <iconset>
-       <normaloff>images/dirtButton.png</normaloff>images/dirtButton.png</iconset>
+      <iconset resource="images.qrc">
+       <normaloff>:/images/images/dirtButton.png</normaloff>:/images/images/dirtButton.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -488,13 +488,15 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
  <slots>
   <slot>teste()</slot>

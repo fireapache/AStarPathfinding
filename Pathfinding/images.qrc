@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/closed.png</file>
+        <file>images/dirt.png</file>
+        <file>images/dirtButton.png</file>
+        <file>images/end.png</file>
+        <file>images/endButton.png</file>
+        <file>images/free.png</file>
+        <file>images/freeButton.png</file>
+        <file>images/opened0.png</file>
+        <file>images/opened1.png</file>
+        <file>images/opened2.png</file>
+        <file>images/opened3.png</file>
+        <file>images/opened4.png</file>
+        <file>images/opened5.png</file>
+        <file>images/opened6.png</file>
+        <file>images/opened7.png</file>
+        <file>images/path.png</file>
+        <file>images/start.png</file>
+        <file>images/startButton.png</file>
+        <file>images/wall.png</file>
+        <file>images/wallButton.png</file>
+    </qresource>
+</RCC>

@@ -12,23 +12,23 @@ MapScene::MapScene(QObject *parent)
 
     this->setSceneRect(0, 0, 0, 0);
 
-    freeNodeImgPath = QDir::currentPath() + "/images/free.png";
-    dirtNodeImgPath = QDir::currentPath() + "/images/dirt.png";
+    freeNodeImgPath = ":/images/images/free.png";
+    dirtNodeImgPath = ":/images/images/dirt.png";
 
-    openedNodeImgPath[0] = QDir::currentPath() + "/images/opened0.png";
-    openedNodeImgPath[1] = QDir::currentPath() + "/images/opened1.png";
-    openedNodeImgPath[2] = QDir::currentPath() + "/images/opened2.png";
-    openedNodeImgPath[3] = QDir::currentPath() + "/images/opened3.png";
-    openedNodeImgPath[4] = QDir::currentPath() + "/images/opened4.png";
-    openedNodeImgPath[5] = QDir::currentPath() + "/images/opened5.png";
-    openedNodeImgPath[6] = QDir::currentPath() + "/images/opened6.png";
-    openedNodeImgPath[7] = QDir::currentPath() + "/images/opened7.png";
+    openedNodeImgPath[0] = ":/images/images/opened0.png";
+    openedNodeImgPath[1] = ":/images/images/opened1.png";
+    openedNodeImgPath[2] = ":/images/images/opened2.png";
+    openedNodeImgPath[3] = ":/images/images/opened3.png";
+    openedNodeImgPath[4] = ":/images/images/opened4.png";
+    openedNodeImgPath[5] = ":/images/images/opened5.png";
+    openedNodeImgPath[6] = ":/images/images/opened6.png";
+    openedNodeImgPath[7] = ":/images/images/opened7.png";
 
-    closedNodeImgPath = QDir::currentPath() + "/images/closed.png";
-    wallNodeImgPath = QDir::currentPath() + "/images/wall.png";
-    pathNodeImgPath = QDir::currentPath() + "/images/path.png";
-    startNodeImgPath = QDir::currentPath() + "/images/start.png";
-    endNodeImgPath = QDir::currentPath() + "/images/end.png";
+    closedNodeImgPath = ":/images/images/closed.png";
+    wallNodeImgPath = ":/images/images/wall.png";
+    pathNodeImgPath = ":/images/images/path.png";
+    startNodeImgPath = ":/images/images/start.png";
+    endNodeImgPath = ":/images/images/end.png";
 
     pathOnScreen = false;
 
