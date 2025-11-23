@@ -4,6 +4,11 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+// Define GL_CLAMP_TO_EDGE if not already defined
+#ifndef GL_CLAMP_TO_EDGE
+#define GL_CLAMP_TO_EDGE 0x812F
+#endif
+
 Renderer::Renderer() : tileSize(8), gridWidth(0), gridHeight(0), scale(1)
 {
     for (int i = 0; i < TEX_COUNT; i++)
