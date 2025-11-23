@@ -4,14 +4,19 @@ project(AStarPathfinding)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Find OpenGL
+# Find OpenGL (system library)
 find_package(OpenGL REQUIRED)
-
-# Find GLFW
-find_package(glfw3 REQUIRED)
 
 # Use FetchContent to download dependencies
 include(FetchContent)
+
+# Download GLFW
+FetchContent_Declare(
+    glfw
+    GIT_REPOSITORY https://github.com/glfw/glfw.git
+    GIT_TAG 3.3.9
+    GIT_SHALLOW TRUE
+)
 
 # Download Dear ImGui
 FetchContent_Declare(
@@ -29,7 +34,12 @@ FetchContent_Declare(
     GIT_SHALLOW TRUE
 )
 
-FetchContent_MakeAvailable(imgui stb)
+# Don't build GLFW tests, examples, and docs
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+
+FetchContent_MakeAvailable(glfw imgui stb)
 
 # ImGui source files
 set(IMGUI_DIR ${imgui_SOURCE_DIR})
