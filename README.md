@@ -39,21 +39,24 @@ Contents of this repository:
 Building from Source:
 
 Requirements:
-	* CMake 3.10 or later
+	* CMake 3.14 or later
 	* C++11 compatible compiler (GCC, Clang, MSVC)
 	* GLFW 3
 	* OpenGL 2.1 or later
-	* OpenGL development libraries
+	* Git (for downloading dependencies)
+
+Note: CMake will automatically download Dear ImGui and stb_image during the build process.
 
 On Ubuntu/Debian:
 
-	# Install dependencies
+	# Install dependencies (only GLFW and OpenGL needed - ImGui downloads automatically)
 	sudo apt-get update
-	sudo apt-get install build-essential cmake libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev
+	sudo apt-get install build-essential cmake git libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev
 
-	# Build the project
-	mkdir build
-	cd build
+	# Clone and build
+	git clone https://github.com/fireapache/AStarPathfinding.git
+	cd AStarPathfinding
+	mkdir build && cd build
 	cmake ..
 	make -j4
 

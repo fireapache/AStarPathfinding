@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.14)
 project(AStarPathfinding)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -10,8 +10,29 @@ find_package(OpenGL REQUIRED)
 # Find GLFW
 find_package(glfw3 REQUIRED)
 
+# Use FetchContent to download dependencies
+include(FetchContent)
+
+# Download Dear ImGui
+FetchContent_Declare(
+    imgui
+    GIT_REPOSITORY https://github.com/ocornut/imgui.git
+    GIT_TAG v1.90.1
+    GIT_SHALLOW TRUE
+)
+
+# Download stb (for stb_image.h)
+FetchContent_Declare(
+    stb
+    GIT_REPOSITORY https://github.com/nothings/stb.git
+    GIT_TAG master
+    GIT_SHALLOW TRUE
+)
+
+FetchContent_MakeAvailable(imgui stb)
+
 # ImGui source files
-set(IMGUI_DIR ${CMAKE_CURRENT_SOURCE_DIR}/vendor/imgui)
+set(IMGUI_DIR ${imgui_SOURCE_DIR})
 set(IMGUI_SOURCES
     ${IMGUI_DIR}/imgui.cpp
     ${IMGUI_DIR}/imgui_demo.cpp
@@ -48,9 +69,9 @@ add_executable(${PROJECT_NAME}
 # Include directories
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/src
-    ${CMAKE_CURRENT_SOURCE_DIR}/vendor
     ${IMGUI_DIR}
     ${IMGUI_DIR}/backends
+    ${stb_SOURCE_DIR}
     ${OPENGL_INCLUDE_DIR}
 )
 
