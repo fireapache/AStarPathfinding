@@ -7,36 +7,82 @@ Demonstration: http://www.youtube.com/watch?v=eVRv49ZibQw
 
 ================
 
-Contents of this repository:
+Technology Stack:
 
-	* Qt GUI project:
-	
-		Used to build 2D maps (matrix of nodes), and to visualize the states of the A* algorithm until the final optimal 
-		path has been created.
-		
-		In order to compile the GUI application, you'll have to, first, install the Qt Creator 2.7.1 or later (based on 
-		Qt 4.8.4 32-bit framework), second, clone this entire repository or pull the updates, third, open the project 
-		using the downloaded editor, and finally, compile the application within the Qt Creator environment.
-		
-	* A* Pathfinding source code:
-	
-		The developed A* algorithm is located inside the Pathfinding\ directory.
-		
-		astar.h
-		astar.cpp
-		
-		The rest of the files belongs to the Qt GUI project.
-		
+	* GLFW 3 - Cross-platform windowing and input
+	* Dear ImGui - Immediate mode GUI
+	* OpenGL 2.1 - Graphics rendering
+	* stb_image - Image loading
 
 ================
 
-Installation:
+Contents of this repository:
 
-	* Install Qt Creator from Ubuntu Software Center.
-	* Clone this repository.
-	* Run it by: ./Build/Pathfinding
-	* Or open Pathfinding.pro file using Qt Creator editor.
-	* Have fun!
+	* GUI Application:
+
+		Used to build 2D maps (matrix of nodes), and to visualize the states of the A* algorithm until the final optimal
+		path has been created. The application uses GLFW for window management, Dear ImGui for the user interface,
+		and OpenGL for rendering the grid.
+
+	* A* Pathfinding source code:
+
+		The developed A* algorithm is located in the src/ directory:
+
+		src/astar.h
+		src/astar.cpp
+
+		The core A* algorithm is completely independent of the GUI framework.
+
+
+================
+
+Building from Source:
+
+Requirements:
+	* CMake 3.10 or later
+	* C++11 compatible compiler (GCC, Clang, MSVC)
+	* GLFW 3
+	* OpenGL 2.1 or later
+	* OpenGL development libraries
+
+On Ubuntu/Debian:
+
+	# Install dependencies
+	sudo apt-get update
+	sudo apt-get install build-essential cmake libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev
+
+	# Build the project
+	mkdir build
+	cd build
+	cmake ..
+	make -j4
+
+	# Run the application
+	./AStarPathfinding
+
+On other platforms:
+
+	1. Install CMake and a C++ compiler
+	2. Install GLFW3 development libraries
+	3. Install OpenGL development libraries
+	4. Follow the same build steps as above
+
+================
+
+Usage:
+
+	1. Set the map width and height
+	2. Click "Build Map" to create a new grid
+	3. Use the tool buttons to:
+	   - Set Start position [S]
+	   - Set End position [E]
+	   - Draw walls [#] (impassable obstacles)
+	   - Draw walkable paths [W]
+	   - Draw dirt [D] (higher cost terrain)
+	4. Choose heuristic: Euclidean or Manhattan
+	5. Click "Show Path" to compute and display the optimal path
+	6. Click "Show Step" or scroll mouse wheel to step through the algorithm visualization
+	7. Click and drag to paint multiple tiles at once
 
 ================
 

@@ -1,8 +1,6 @@
 #ifndef FIXINCLUDE_H
 #define FIXINCLUDE_H
 
-#include <QGraphicsPixmapItem>
-#include <QDir>
 #include <list>
 
 using namespace std;
@@ -103,24 +101,18 @@ public:
     ~NodeState();
 };
 
+// MapNode for rendering - no Qt dependencies
 class MapNode
 {
 
 public:
     NodeType type;
-
     UINT expandCost;
 
-    QGraphicsPixmapItem pixmapItem;
-};
+    // Texture index instead of QGraphicsPixmapItem
+    int textureIndex;
 
-struct RunResources
-{
-    class MapNode **map;
-    list<pair<UINT, UINT> > *path;
-    list<list<NodeState> > *steps;
-    pair<UINT, UINT> start;
-    pair<UINT, UINT> end;
+    MapNode() : type(WAYNODE), expandCost(1), textureIndex(0) {}
 };
 
 #endif // FIXINCLUDE_H
